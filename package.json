@@ -1,5 +1,5 @@
 {
-  "name": "node_mysql_migration",
+  "name": "jrs_mygrate",
   "version": "0.1.0",
   "description": "Simple migration script to facilitate database evolution in mysql",
   "main": "index.js",
