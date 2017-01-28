@@ -5,7 +5,7 @@
 var commandUsage = "mygrate create \n" + 
                     "\ttable [table] <column1:type> <column2:type> ...\n" + 
                     "\tcolumn [table] [column1:type] <column2:type> ...\n" + 
-                    "\tempty [mygrate_file_name]";
+                    "\tempty [migration_name]";
 
 var run = function(args, mygrate){
     var functions = {
@@ -101,7 +101,7 @@ var addColumn = function(args, mygrate){
 var emptyMigration = function(args, mygrate){
     var fileName = args[2];
     
-    mygrate.createMigrationFile(tableName, fileName, "SET UP SQL HERE", "TEAR DOWN SQL HERE", "Custom migration");
+    mygrate.createMigrationFile("TABLE_NAME", fileName, "SET UP SQL HERE", "TEAR DOWN SQL HERE", "Custom migration");
 }
 
 module.exports = {
