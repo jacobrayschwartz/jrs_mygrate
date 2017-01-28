@@ -1,6 +1,6 @@
 {
   "name": "jrs_mygrate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple migration script to facilitate database evolution in mysql",
   "main": "index.js",
   "author": "Jacob Schwartz <jacobrayschwartz@gmail.com>",
@@ -8,7 +8,7 @@
   "dependencies": {
     "mysql": "^2.11.1"
   },
-  "bin" : {
-    "mygrate" : "./bin/mygrate_bin.js"
+  "bin": {
+    "mygrate": "./bin/mygrate_bin.js"
   }
 }
