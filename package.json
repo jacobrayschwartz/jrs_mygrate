@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Jacob Schwartz <jacobrayschwartz@gmail.com>",
   "license": "ISC",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/jacobrayschwartz/jrs_mygrate.git"
+  },
   "dependencies": {
     "mysql": "^2.11.1"
   },

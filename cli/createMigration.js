@@ -4,12 +4,14 @@
 
 var commandUsage = "mygrate create \n" + 
                     "\ttable [table] <column1:type> <column2:type> ...\n" + 
-                    "\tcolumn [table] [column1:type] <column2:type> ...";
+                    "\tcolumn [table] [column1:type] <column2:type> ...\n" + 
+                    "\tempty [mygrate_file_name]";
 
 var run = function(args, mygrate){
     var functions = {
         "table" : createTable,
-        "column" : addColumn
+        "column" : addColumn,
+        "empty" : emptyMigration
     }
     
     if(args.length < 2){
@@ -89,6 +91,17 @@ var addColumn = function(args, mygrate){
         
     
     mygrate.createMigrationFile(tableName, "add_columns_" + tableName, addSql, dropSql, "Add columns to table " + tableName);
+}
+
+/**
+ * Generates a migration file to create a table in the db
+ * @param {array}   args    Arguments
+ * @param {mygrate} mygrate Mygrate library
+ */
+var emptyMigration = function(args, mygrate){
+    var fileName = args[2];
+    
+    mygrate.createMigrationFile(tableName, fileName, "SET UP SQL HERE", "TEAR DOWN SQL HERE", "Custom migration");
 }
 
 module.exports = {
