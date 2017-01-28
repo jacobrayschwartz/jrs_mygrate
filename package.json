@@ -1,6 +1,6 @@
 {
   "name": "jrs_mygrate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple migration script to facilitate database evolution in mysql",
   "main": "index.js",
   "author": "Jacob Schwartz <jacobrayschwartz@gmail.com>",
