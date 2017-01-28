@@ -29,9 +29,9 @@ if(!fs.existsSync(mygrateSettingsFile)){
 var settings = JSON.parse(fs.readFileSync(mygrateSettingsFile));
 
 mygrate.setup(settings.host,
-                settings.database,
                 settings.user,
                 settings.password,
+                settings.database,
                 settings.port,
                 global.mygrateDir + "/migrations");
 
